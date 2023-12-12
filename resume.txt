@@ -1,0 +1,202 @@
+ \documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english,russian]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{ #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Григорий Мхитарян}} & \faIcon{envelope}: \href{mailto:exclide1@gmail.com}{exclide1@gmail.com}\\
+  {\Large{Backend Developer}} & \faIcon{phone-square-alt}:~+7 (921) 414-58-08 \\
+  {Санкт-Петербург, Россия} & \faIcon{github}: \href{https://github.com/xcvtt}{~github.com/xcvtt} \\
+  {} & \href{https://t.me/xcvtt}{\faIcon{telegram}: @xcvtt} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{~~Образование}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Университет ИТМО}{Санкт-Петербург, Россия}
+      {Факультет информационных технологий и программирования}{Сен. 2021 - Авг. 2025}
+      \vspace{2pt}
+      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Дисциплины:} Алгоритмы и структуры данных, Объектно-ориентированное программирование, Операционные системы, Базы данных, Технологии программирования, Компьютерные сети, Архитектура ЭВМ, Многопоточное программирование}}}
+    \resumeSubHeadingListEnd
+	    
+\vspace{5pt}
+\section{Навыки}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Языки}{C++, C, C\#, Java, Go, SQL}
+	\resumeSubItem{Frameworks}{Boost.Asio, Boost.Beast, Qt6, STL, .NET Core, Java Spring}
+	\resumeSubItem{Инструменты}{Git/github, protobuf, gRPC, REST, Kafka, Docker/docker-compose, PostgreSQL, github actions, arch linux}
+        \resumeSubItem{Уровень английского C1}{}
+
+\resumeSubHeadingListEnd
+\vspace{5pt}
+
+\section{Проекты}
+  \resumeSubHeadingListStart
+    \resumeSubheading{Chat app - Boost.Asio/Beast, Qt6 \href{https://github.com/xcvtt/asio-server}{~\faIcon{github} github.com/xcvtt/asio-server } \href{https://github.com/xcvtt/asio-client}{~\faIcon{github} github.com/xcvtt/asio-client } }{} 
+    {Клиент-серверное чат приложение}{}
+    \resumeItemListStart
+          \resumeItem{}
+          {Реализация асинхронного Websocket чат-сервера с Boost.Beast}
+          \resumeItem{}
+          {Реализация http-сервера с ручками на регистрацию и аутентификацию}
+          \resumeItem{}
+          {TSL шифрование трафика сокета, JWT-токены для авторизации, nlohmann-json, jwt-cpp}
+          \resumeItem{}
+          {Бд Postgresql для данных о пользователях и сообщениях, библиотека libpqxx}
+          \resumeItem{}
+          {Реализация клиентской части с Qt6 UI/Network}
+          \resumeItem{}
+          {Использование пакетного менеджера vcpkg и системы сборки CMake}
+          \resumeItem{}
+          {Покрытие кода unit-тестами, библиотека GoogleTest}
+      \resumeItemListEnd 
+\vspace{5pt}
+
+    \resumeSubheading{Агрегатор сообщений -- C\#, ASP.NET Core - \href{https://github.com/xcvtt/message-aggregator}{~\faIcon{github} github.com/xcvtt/message-aggregator} } {}
+    {Сервис агрегации сообщений с Clean Rich архитектурой, DDD}{}
+    \resumeItemListStart
+        \resumeItem{}
+          {Разбиение приложение на 'слои' луковицы: domain (entities), use-cases (services), infra (db), presentation (web)}
+          \resumeItem{}
+          {Rest API, аутентификация/авторизация cookies}
+          \resumeItem{}
+          {Паттерн CQRS в качестве service слоя}
+          \resumeItem{}
+          {PostegreSQL + ORM EF Core}
+          \resumeItem{}
+          {Покрытие слоев юнит-тестами 91.5\%}
+      \resumeItemListEnd
+\vspace{5pt}
+  
+    \resumeSubheading{Movie service - Go, protobuf, gRPC, REST, Docker - \href{https://github.com/xcvtt/movie-service}{~\faIcon{github} github.com/xcvtt/movie-service } }{} 
+    {Микросервис фильмов и режиссеров}{}
+    \resumeItemListStart
+          \resumeItem{}
+          {Dockerfile, docker-compose из самого приложения, бд и миграций}
+          \resumeItem{}
+          {REST API, Удаленный вызов процедур сервиса с gRPC, JWT token auth}
+          \resumeItem{}
+          {CI github actions - build/test/lint (golangci-lint)}
+      \resumeItemListEnd 
+\vspace{5pt}
+
+    \resumeSubheading{Pool Allocator -- C++, STL - \href{https://github.com/xcvtt/pool-allocator}{~\faIcon{github} github.com/xcvtt/pool-allocator }}{}
+    {Реализация кастомного lock-free аллокатора памяти, совместимого со стандартными структурами данных STL}{}
+    \resumeItemListStart
+          \resumeItem{}
+          {Реализация многопоточного lock-free алгоритма и сравнение производительности с блокирующим мютексом/спинлоком}
+          \resumeItem{}
+          {Реализация pool аллокатора фиксированного размера с использованием стека}
+          \resumeItem{}
+          {Сравнение скорости работы стандартного и pool аллокаторов}
+      \resumeItemListEnd
+\vspace{5pt}
+
+    \resumeSubheading{Car model API -- Java, Spring Boot, Docker, Kafka}{}
+    {Веб-приложение с микросервисной архитектурой}{}
+    \resumeItemListStart
+        \resumeItem{}
+          {Использование брокера сообщений Kafka для передачи данных между сервисами}
+          \resumeItem{}
+          {Spring Security, JWT-token аутентификация/авторизация}
+          \resumeItem{}
+          {PostgreSQL с ORM Spring Hibernate}
+         \resumeItem{}
+          {Миграции баз данных, Flyway}
+        \resumeItem{}
+          {REST, Swagger}
+      \resumeItemListEnd
+\vspace{5pt}
+    \resumeSubheading{Кубик рубика -- C++, STL}{}
+    {Реализация кубика с визуализацией и различными алгоритмами сборки}{}
+    \resumeItemListStart
+        \resumeItem{}
+          {Использование библиотеки GLUT для визуализации кубика и поворотов, imgui для реализации пользовательского интерфейса с настройками алгоритмов сборки}
+          \resumeItem{}
+          {Реализация слепого алгоритма сборки Old Pochmann для быстрой сборки}
+          \resumeItem{}
+          {Реализация генетического алгоритма сборки}
+      \resumeItemListEnd
+\vspace{5pt}
+  
+
+\resumeSubHeadingListEnd
+
+
+
+\end{document}
